@@ -1,0 +1,48 @@
+
+<%# Add styling bootstrap head and footer %>
+<% include partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>This is FINE...</h1>
+            <p>Welcome to Find Internal Nighht Event in your Town.</p>
+            <p>
+                <a class="btn btn-warning" href="">Find Event in Town</a>
+                <a class="btn btn-info" href="/allevents/new">Add New Event In Your Town!</a>            
+            </p>
+        </div>
+    </header>
+
+
+    
+    <div class="row">
+        <% allEvents.forEach((singlEvent)=> { %>
+            <!-- <div class="col-md-3 col-sm-6">                
+                <div class="card-body">
+                    <h2 class="card-title"><%= singlEvent.name %></h2>
+                    <h3 class="card-text"><%= singlEvent.genre %></h3>
+                </div>
+                
+                <div class="card" style="width: 18rem">
+                    <img class="card-img-top" src="<%= singlEvent.image %>"> 
+                </div>       
+            </div> -->
+
+            <div class="card" style="width: 14rem;">
+                <h7 class="card-title card-header"><%= singlEvent.genre %></h7>
+                <img src="<%= singlEvent.image %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= singlEvent.name %></h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">More Info</a>
+                </div>
+              </div>
+            
+        <% }); %>
+    </div>
+
+    <hr>
+    <a href="/">Back Home</a>
+</div>
+<% include partials/footer %>
