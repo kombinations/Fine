@@ -52,6 +52,6 @@
 
 # How to start the server...
 - Install
-> npm install
-> run node
-> ;) 
+- > npm install
+- > run node
+- > ;) 
